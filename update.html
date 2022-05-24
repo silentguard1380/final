@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <title> update</title>
+</head>
+
+<h1 align="center">UPDATE YOUR LIST {{context}}</h1>
+
+<form method="post" align="center">
+    <input type="text" name="title" placeholder="enter title " value="{{post.title}}" required><br><br>
+    <input type="textarea" name="body" placeholder="Enter tour description" style="width: 668px; height: 198px;" value="{{post.body}}" required> </input><br><br>
+    <input type="submit" name="save" value="save to database">
+    
+</form>
+<style>
+    body{
+  background: -webkit-linear-gradient(left, #25c481, #25b7c4);
+  background: linear-gradient(to right, #25c481, #25b7c4);
+  font-family: 'Roboto', sans-serif;
+}
+textarea {
+  width:100%;
+  resize: vertical;
+  padding:15px;
+  border-radius:15px;
+  border:0;
+  box-shadow:4px 4px 10px rgba(0,0,0,0.06);
+  height:150px;}
+input {
+  padding:10px;
+  border-radius:20px;
+  border:0;
+  box-shadow:4px 4px 10px rgba(0,0,0,0.06);
+}
+</style>
+
+</html>

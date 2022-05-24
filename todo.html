@@ -1,0 +1,46 @@
+<html>
+<head>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/test.css') }}">
+</head>
+<section>
+
+  <h1>YOUR GOALS TABLE</h1>
+  <div class="tbl-header">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <tr>
+          <th>title</th>
+          <th>description</th>
+          <th>date</th>
+          <th>options</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <tbody>
+      {% for i in posts %}
+        <tr>
+          <td>{{i.title}} </td>
+          <td>{{i.body}} </td>
+          <td>{{i.date}} </td>
+             <td><a href="/delete/post/{{i.id}}">delete</a>/<a href="/update/post/{{i.id}}">update</a></td>
+        </tr>
+      {% endfor %}
+
+
+      </tbody>
+    </table>
+  </div>
+</section>
+
+
+
+<div class="made-with-love" style="font-size:20px;">
+
+  <i>♥</i>
+  <a target="_blank" href="/">back to home </a><br>
+  <a target="_blank" href="/addpost">add goal</a>
+</div>
+</html>
